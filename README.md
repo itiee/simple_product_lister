@@ -38,12 +38,10 @@
     ├── services/         # API Service (Networking Layer)
     ├── screens/          # UI Screens (List & Detail)
     └── widgets/          # UI Components (ProductCard, ErrorView)
+```
 
-
-
-
-
-
-
-
-
+## 📸 Screenshots
+<p align="center">
+  <img width="280" alt="productList" src="https://github.com/user-attachments/assets/96da1cdd-4f4c-4b35-a0a7-8be86d2bd726" />
+  <img width="280" alt="productDtail" src="https://github.com/user-attachments/assets/d9ab8dab-3197-4991-b096-09e9a1193572" />
+</p>
