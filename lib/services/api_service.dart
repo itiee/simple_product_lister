@@ -21,7 +21,6 @@ class ApiService {
           )
           .timeout(const Duration(seconds: 10));
 
-      print ('Response Status: ${response.body}');
       return _handleProductsResponse(response);
     } on SocketException {
       throw NetworkException();
@@ -37,7 +36,6 @@ List<ProductModel> _handleProductsResponse(http.Response response) {
   switch (response.statusCode) {
     case 200:
       final Map<String, dynamic> data = json.decode(response.body);
-      print('Parsed Data: $data');
       return ProductResponse.fromJson(data).products;
 
     case 404:

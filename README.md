@@ -1,16 +1,49 @@
-# simple_product_lister
+# 🛒 Simple Product Lister 
 
-A new Flutter project.
+แอปพลิเคชันแสดงรายการสินค้าจาก DummyJSON API 
 
-## Getting Started
+## 🚀 Features
+- **Product List Screen**: แสดงรายการสินค้าพร้อมรูปภาพ ชื่อ และราคา พร้อมระบบ Loading Indicator
+- **Error Handling**: จัดการกรณีไม่มีอินเทอร์เน็ตหรือ Server Error ด้วย UI ที่ชัดเจนและปุ่ม Retry
+- **Product Detail Screen**: แสดงรายละเอียดสินค้าขนาดใหญ่ พร้อมคำอธิบายครบถ้วน
+- **Pull-to-Refresh**: สามารถดึงหน้าจอเพื่ออัปเดตข้อมูลใหม่ได้
 
-This project is a starting point for a Flutter application.
+- **Advanced State Management**: ใช้ `ProductController` (ChangeNotifier) แยก Logic ออกจาก UI 100%
+- **Smart Filtering**: กรองสินค้าตามหมวดหมู่ (Category) ได้แบบ Real-time
+- **Robust Error Handling**: จัดการกรณี Offline หรือ API Error ด้วย Custom Exceptions และหน้าจอ Retry 
+- **Type-Safe Data Model**: ป้องกันแอปแครชด้วยการทำ Data Mapping อย่างละเอียด (โดยไม่ใช้ `dynamic`)
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠 Tech Stack & Architecture
+- **Language**: Dart (Flutter Framework)
+- **Architecture**: Controller Pattern (MVVM-like)
+- **Networking**: `http` package
+- **Image Caching**: `cached_network_image` เพื่อลดการใช้งาน Data และเพิ่มความลื่นไหลของ UI
+- **Project Structure**: แบ่งเลเยอร์ตามหน้าที่ (Models, Services, Screens, Widgets)
+- **Library**: 
+  - `http`: สำหรับการเชื่อมต่อ API
+  - `cached_network_image`: เพื่อการจัดการแคชรูปภาพที่มีประสิทธิภาพ
+  - `mockito`: สำหรับการทำ Unit Test (Mocking)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🤖 AI Tools Usage
+มีการใช้งาน AI Tools (Gemini/ChatGPT) ในขั้นตอนดังนี้:
+- ช่วยร่างโครงสร้าง Folder ให้เป็นไปตาม Standard แนวทาง Clean Architecture
+- ช่วยแนะนำแนวทางการเขียน README เพื่อให้สื่อสารข้อมูลทางเทคนิคได้ครบถ้วน
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📁 Project Structure
+```text
+    lib/
+    ├── core/             # ค่าคงที่และ Custom Exceptions (Error Handling)
+    ├── models/           # ข้อมูลสินค้า (Type-safe Models)
+    ├── controllers/      # Business Logic & State Management (ProductController)
+    ├── services/         # API Service (Networking Layer)
+    ├── screens/          # UI Screens (List & Detail)
+    └── widgets/          # UI Components (ProductCard, ErrorView)
+
+
+
+
+
+
+
+
+
