@@ -26,6 +26,8 @@ class ApiService {
       throw NetworkException();
     } on http.ClientException {
       throw ApiException('cannot connect to the server.');
+    } on ApiException {
+      rethrow;
     } catch (e) {
       throw ApiException('Unexpected error: ${e.toString()}');
     }

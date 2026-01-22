@@ -5,7 +5,9 @@ import '../services/api_service.dart';
 enum ProductStatus { initial, loading, loaded, error }
 
 class ProductController extends ChangeNotifier {
-  final ApiService _apiService = ApiService();
+  final ApiService _apiService;
+
+  ProductController({ApiService? apiService}) : _apiService = apiService ?? ApiService();
 
   List<ProductModel> _allProducts = [];
   List<ProductModel> _filteredProducts = []; 
