@@ -8,8 +8,8 @@
 - **Product Detail Screen**: แสดงรายละเอียดสินค้าขนาดใหญ่ พร้อมคำอธิบายครบถ้วน
 - **Pull-to-Refresh**: สามารถดึงหน้าจอเพื่ออัปเดตข้อมูลใหม่ได้
 
-- **Advanced State Management**: ใช้ `ProductController` (ChangeNotifier) แยก Logic ออกจาก UI 100%
-- **Smart Filtering**: กรองสินค้าตามหมวดหมู่ (Category) ได้แบบ Real-time
+- **Advanced State Management**: ใช้ `ProductController` (ChangeNotifier) แยก Logic ออกจาก UI
+- **Filtering**: กรองสินค้าตามหมวดหมู่ (Category) ได้
 - **Robust Error Handling**: จัดการกรณี Offline หรือ API Error ด้วย Custom Exceptions และหน้าจอ Retry 
 - **Type-Safe Data Model**: ป้องกันแอปแครชด้วยการทำ Data Mapping อย่างละเอียด (โดยไม่ใช้ `dynamic`)
 
